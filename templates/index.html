@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marven Stark Bookshop</title>
+  </head>
+  <body>
+    <h1>Book Orders List</h1>
+
+    {% for item in order %}
+
+    <p><b>Customer: </b> {{item.customer_name}}</p>
+    <p><b>Order: </b> {{item.book_name}}</p>
+    <p><b>Date: </b> {{item.order_date}}</p>
+    <p><b>Quantity: </b>{{item.quantity}}</p>
+    <a href="/order/{{loop.index}}">View Order</a>
+
+    {% endfor %}
+  </body>
+</html>
